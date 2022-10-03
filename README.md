@@ -9,7 +9,7 @@ Ubuntu + Pyenv + Poetry
 
 ## 사용법
 ### 빌드된 이미지 사용
-- [Docker Hub]((https://hub.docker.com/r/fkaus5555/dl-world))에서 이미 빌드된 이미지를 사용하실 수 있습니다.
+- [Docker Hub](https://hub.docker.com/r/fkaus5555/dl-world)에서 이미 빌드된 이미지를 사용하실 수 있습니다.
 - 다음 명령어로 docker 이미지를 pull할 수 있습니다.
 ```bash
 # Tag: Ubuntu 22.04 + cuda 11.7.1 + cudnn8 + Pyenv + Poetry
