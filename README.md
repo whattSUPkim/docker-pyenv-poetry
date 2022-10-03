@@ -49,5 +49,21 @@ docker run -itd --name test-container \
 dl-world:cuda11.7.1-cudnn8-ubuntu22.04
 ```
 
+## 버전 정보
+#### LASTEST: CUDA 11.7 Update 1
+- base
+  - ubuntu 22.04
+  - cuda 11.7.1
+  - cudnn8
+- dldev 
+  - ubuntu 22.04
+  - cuda 11.7.1
+  - cudnn8
+  - poetry.dependencies
+     ![image](https://user-images.githubusercontent.com/83912849/193665663-3bd29d21-3707-482d-bf57-4e846feaf0ed.png)
+
+
+  
+  
 
 #### 개발 과정: [블로그](https://velog.io/@whattsup_kim/GPU-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-docker%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%ED%95%9C-%EB%B2%88%EC%97%90-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0)
