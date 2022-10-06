@@ -88,3 +88,6 @@ COPY pyproject.toml $HOME/workspace/machine-learning/pyproject.toml
 RUN /bin/bash -c "pyenv local $PYTHON_VERSION" && \
     poetry env use python3 && \
     poetry run poetry install --no-cache
+CMD cd $HOME/workspace/machine-learning && \
+    poetry run jupyter lab --ip 0.0.0.0 --allow-root \
+    --NotebookApp.token= --no-browser --notebook-dir=$HOME
