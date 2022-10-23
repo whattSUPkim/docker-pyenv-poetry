@@ -29,6 +29,12 @@ docker build -t <image-name>:<tag> \
 --build-arg USER_NAME=<user-name> \
 --build-arg USER_PASSWORD=<user-password> \
 --build-arg PYTHON_VERSION=<python-version> .
+
+# dldev 버전은 `entrypoin.sh`을 사용하므로, 최초 실행 시 권한을 변경해주어야 합니다. 
+chmod +x ./entrypoint.sh && docker build -t <image-name>:<tag> \
+--build-arg USER_NAME=<user-name> \
+--build-arg USER_PASSWORD=<user-password> \
+--build-arg PYTHON_VERSION=<python-version> .
 ```
 
 
