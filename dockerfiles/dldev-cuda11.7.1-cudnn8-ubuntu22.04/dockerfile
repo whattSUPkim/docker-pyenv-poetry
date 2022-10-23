@@ -57,9 +57,6 @@ ENV HOME /home/$USER_NAME
 RUN mkdir $HOME/.cache $HOME/.config && \
     chmod -R 777 $HOME 
 
-# Re-run ssh when the container restarts.
-RUN echo "sudo service ssh start > /dev/null" >> $HOME/.bashrc
-
 # Create a workspace directory
 RUN mkdir $HOME/workspace
 WORKDIR $HOME/workspace
@@ -88,6 +85,6 @@ COPY pyproject.toml $HOME/workspace/machine-learning/pyproject.toml
 RUN /bin/bash -c "pyenv local $PYTHON_VERSION" && \
     poetry env use python3 && \
     poetry run poetry install --no-cache
-CMD cd $HOME/workspace/machine-learning && \
-    poetry run jupyter lab --ip 0.0.0.0 --allow-root \
-    --NotebookApp.token= --no-browser --notebook-dir=$HOME
+
+COPY entrypoint.sh /
+ENTRYPOINT ["/bin/bash","-c","/entrypoint.sh"]
